@@ -1,0 +1,77 @@
+public class Estudiante {
+     private int legajo;
+    private String nombre;
+    private int edad;
+    private String curso;
+    
+    public Estudiante(){}
+    
+    public void setLegajo(int legajo){
+        this.legajo = legajo;
+    }
+    public int getLegajo(){
+        return this.legajo;
+    }
+    public void setNombre(String nombre){
+        this.nombre=nombre;
+    }
+    public String getNombre(){
+        return this.nombre;
+    }
+    public void setEdad(int edad){
+        this.edad=edad;
+    }
+    public int getEdad(){
+        return this.edad;
+    }
+    public void setCurso(String curso){
+        this.curso=curso;
+    }
+    public String getCurso(){
+        return this.curso;
+        
+        
+    
+}
+    }
+(Hasta aquí la class)
+
+
+import javax.swing.JOptionPane;
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author Tiago
+ */
+public class Estudiantes {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        int a=1;
+        int i;
+        
+        Estudiante alumno[]=new Estudiante[a];
+ 
+        for(i=0; i<alumno.length; i++){
+            alumno[i] = new Estudiante();
+            alumno[i].setLegajo(Integer.valueOf(JOptionPane.showInputDialog("Ingrese legajo: ")));
+            alumno[i].setNombre(JOptionPane.showInputDialog("Ingrese nombre: "));
+            alumno[i].setEdad(Integer.valueOf(JOptionPane.showInputDialog("Ingrese edad(en años): ")));
+            alumno[i].setCurso(JOptionPane.showInputDialog("Ingrese curso: "));
+        }
+for(i=0; i<alumno.length; i++){
+            JOptionPane.showMessageDialog(null, alumno[i].getLegajo()+", " + alumno[i].getNombre()+", "+alumno[i].getEdad()+" años, "+alumno[i].getCurso());
+        }   
+    }
+    
+}
+    
+    (Hasta aquí la Main Class)
